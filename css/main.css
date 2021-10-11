@@ -1,0 +1,11 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 20vw;
+    margin: auto;
+}
+
