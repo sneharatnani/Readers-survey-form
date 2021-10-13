@@ -5,35 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readers survey form</title>
+    <title>readers survey form</title>
     <link rel="icon" href="img/favicon-32x32.png" type="img/png">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <header class="heading">
-            <h1 id="title">Readers survey form</h1>
-            <p id="description">If you are a reader or thinking of becoming one then you should definitely take this survey
+            <h1 id="title">Readers survey</h1>
+            <p id="description">If you are a reader or thinking of becoming one then you should definitely take this
+                survey
             </p>
         </header>
-        You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+        <form action="#" id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required/>
 
-User Story #1: I can see a title with id="title" in H1 sized text.
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
-User Story #2: I can see a short explanation with id="description" in P sized text.
+            <label for="number" id="number-label">Age (Optional)</label>
+            <input type="number" id="number" placeholder="Age" min="14" max="100">
+            <!-- dropdown menu ------------------>
+            <label for="dropdown">Which medium do you choose to read from?</label><br>
+            <select name="medium" id="dropdown">
+                <option value="" disabled selected>Choose medium</option>
+                <option value="printbook">Print Books</option>
+                <option value="ebook">E-books</option>
+                <option value="magazines">Magazines</option>
+                <option value="newspaper">Newspapers</option>
+                <option value="smartphone">Smartphone</option>
+                <option value="other">Other</option>
+            </select>
+            <!-- radio buttons--------------------->
+            <p class="radio-label">What do you prefer?</p>
+            <input type="radio" id="fiction" name="preference" value="fiction">
+            <label for="fiction">Fiction</label><br>
 
-User Story #3: I can see a form with id="survey-form".
+            <input type="radio" id="nonfiction" name="preference" value="nonfiction">
+            <label for="nonfiction">Non-fiction</label><br>
 
-User Story #4: Inside the form element, I am required to enter my name in a field withYou can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+            <input type="radio" id="both" name="preference" value="both">
+            <label for="both">Both</label><br>
+            <!------------ checkbox ---------------------->
+            <p class="check-label">Which of the following genres of books do you prefer to read?</p>
+            <input type="checkbox" id="mystery" name="genre" value="mystery">
+            <label for="mystery">Mystery</label><br>
 
-User Story #1: I can see a title with id="title" in H1 sized text.
+            <input type="checkbox" id="adventure" name="genre" value="adventure">
+            <label for="adventure">Adventure</label><br>
 
-User Story #2: I can see a short explanation with id="description" in P sized text.
+            <input type="checkbox" id="bio" name="genre" value="bio">
+            <label for="bio">Biographies</label><br>
 
-User Story #3: I can see a form with id="survey-form".
+            <input type="checkbox" id="fantasy" name="genre" value="fantasy">
+            <label for="fantasy">Fantasy</label><br>
 
-User Story #4: Inside the form element, I am required to enter my name in a field with
+            <input type="checkbox" id="rom" name="genre" value="rom">
+            <label for="rom">Romance</label><br>
+
+            <input type="checkbox" id="scifi" name="genre" value="scifi">
+            <label for="scifi">Sci-fi</label><br>
+
+            <!-- textarea ------------------------->
+            <label for="textarea" id="comment">Which is your favorite book and why?</label><br>
+            <textarea name="textarea" id="textarea" placeholder="Write here..."></textarea>
+        </form>
     </div>
 </body>
 

@@ -5,7 +5,81 @@ body {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    width: 20vw;
+    font-size: 1.2rem;
+}
+
+.container {
+    color: white;
+    width: 55vw;
     margin: auto;
 }
 
+.heading, form {
+    background-color: #0808087a;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+#title {
+    font-size: 4vw;
+    margin-top: 0;
+    text-transform: capitalize;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#description {
+    font-family: 'Roboto', sans-serif;
+    margin-top: -30px;
+}
+
+form {
+    padding: 15px 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 8px;
+}
+
+input[type=text], 
+input[type=email], 
+input[type=number], 
+select, 
+textarea {
+    height: 5vh;
+    padding-left: 7px;
+    font-size: 17px;
+    margin: 5px 0 25px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+select {
+    background-color: white;
+}
+
+.radio-label {
+    margin: 0;
+}
+
+input[type=radio], input[type=checkbox] {
+    margin-top: 13px;
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.check-label {
+    margin: 25px 0 0;
+}
+
+textarea {
+    height: 20vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#comment {
+    display: inline-block;
+    margin-top: 25px;
+}
