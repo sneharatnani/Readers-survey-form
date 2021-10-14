@@ -1,10 +1,9 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url(../img/janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
     font-size: 1.2rem;
 }
 
@@ -14,8 +13,11 @@ body {
     margin: auto;
 }
 
-.heading, form {
-    background-color: #0808087a;
+form {
+    padding: 15px 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .heading {
@@ -25,37 +27,36 @@ body {
 
 #title {
     font-size: 4vw;
-    margin-top: 0;
-    text-transform: capitalize;
-    font-family: 'Playfair Display', sans-serif;
+    text-transform: uppercase;
+    font-family: 'Old Standard TT', sans-serif;
 }
 
 #description {
+    font-style: italic;
     font-family: 'Roboto', sans-serif;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
-form {
-    padding: 15px 40px;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 8px;
-}
-
-input[type=text], 
-input[type=email], 
-input[type=number], 
-select, 
-textarea {
+input[type=text], input[type=email], input[type=number], select, textarea {
     height: 5vh;
     padding-left: 7px;
     font-size: 17px;
     margin: 5px 0 25px;
     border: none;
     width: 100%;
-    border-radius: 5px;
+}
+
+input[type=text], input[type=email], input[type=number] {
+    border-bottom: 2px solid white;
+    background-color: transparent;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus {
+    border: 2px solid white;
 }
 
 select {
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -75,6 +76,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 textarea {
+    border-radius: 5px;
     height: 20vh;
     font-family: 'Roboto', sans-serif;
 }
@@ -82,4 +84,20 @@ textarea {
 #comment {
     display: inline-block;
     margin-top: 25px;
+}
+
+input[type=radio]:focus {}
+
+/* media query------- */
+
+@media screen and (max-width:800px) {
+    .container {
+        width: 98vw;
+    }
+    form {
+        padding: 15px 20px;
+    }
+    #title {
+        font-size: 10vw;
+    }
 }
