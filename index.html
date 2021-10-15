@@ -25,13 +25,14 @@
         </header>
         <form action="#" id="survey-form">
             <label for="name" id="name-label">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required/>
+            <input type="text" id="name" placeholder="Enter your name" required autocomplete="off"/>
+           
 
             <label for="email" id="email-label">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="email" id="email" placeholder="Enter your email" required autocomplete="off">
 
             <label for="number" id="number-label">Age (Optional)</label>
-            <input type="number" id="number" placeholder="Age" min="14" max="100">
+            <input type="number" id="number" placeholder="Age" min="14" max="100" autocomplete="off">
             <!-- dropdown menu ------------------>
             <label for="dropdown">Which medium do you choose to read from?</label><br>
             <select name="medium" id="dropdown">
@@ -76,6 +77,9 @@
             <!-- textarea ------------------------->
             <label for="textarea" id="comment">Which is your favorite book and why?</label><br>
             <textarea name="textarea" id="textarea" placeholder="Write here..."></textarea>
+
+            <!-- submit button -->
+            <button id="submit" type="submit">submit</button>
         </form>
     </div>
 </body>
