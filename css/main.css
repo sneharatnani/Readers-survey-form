@@ -1,14 +1,15 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    background-attachment: fixed;
     font-size: 1.2rem;
+    background-image: url(../img/luke-chesser-eICUFSeirc0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
-    color: white;
     width: 55vw;
     margin: auto;
 }
@@ -16,6 +17,7 @@ body {
 /* heading ----------- */
 
 .heading {
+    color: white;
     text-align: center;
     padding-bottom: 1px;
 }
@@ -28,46 +30,98 @@ body {
 
 #description {
     font-style: italic;
-    font-family: 'Roboto', sans-serif;
     margin-top: -20px;
 }
 
 /* form----------- */
 
 form {
+    box-shadow: 0 0 30px #00000057;
     padding: 15px 40px;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 8px;
-    background-color: #fffbfb3d;
+    background-color: white;
 }
 
-input[type=text], input[type=email], input[type=number], select, textarea {
+.wrapper, textarea, #dropdown {
     outline: none;
     box-sizing: border-box;
-    height: 5vh;
-    padding: 5px 10px;
-    font-size: 17px;
     margin: 5px 0 25px;
-    border: none;
+    font-size: 17px;
     width: 100%;
 }
 
+.wrapper {
+    position: relative;
+}
+
+.underline {
+    position: absolute;
+    height: 3px;
+    bottom: 0.5px;
+    width: 100%;
+}
+
+.underline::before {
+    transform: scaleX(0);
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
 input[type=text], input[type=email], input[type=number] {
-    border-bottom: 3px solid white;
-    appearance: none;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+}
+
+input[type=text]:focus~.underline::before, input[type=email]:focus~.underline::before, input[type=number]:focus~.underline::before {
+    transform: scaleX(1);
+}
+
+input[type=text], input[type=email], input[type=number] {
+    box-sizing: border-box;
+    border-bottom: 3px solid silver;
     -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
     background: transparent;
 }
 
-select {
-    border-radius: 5px;
-    background-color: white;
-}
-
 .radio-label {
     margin: 0;
+}
+
+.slider {
+    margin-top: 30px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type=range] {
+    cursor: pointer;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    border: none;
+    height: 7px;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-top: -4px;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -81,15 +135,24 @@ input[type=radio], input[type=checkbox] {
     margin: 25px 0 0;
 }
 
-textarea {
-    border-radius: 5px;
-    height: 20vh;
+.writing-area {
+    margin-top: 25px;
+}
+
+input, textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-#comment {
-    display: inline-block;
-    margin-top: 25px;
+#dropdown {
+    border: 3px solid transparent;
+    padding: 10px 10px;
+    background: white;
+}
+
+textarea {
+    border: 3px solid transparent;
+    height: 130px;
+    padding: 5px 10px;
 }
 
 #submit {
@@ -97,8 +160,6 @@ textarea {
     background: black;
     cursor: pointer;
     border: 4px solid transparent;
-    border-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    border-image-slice: 1;
     display: block;
     margin: auto;
     width: 150px;
@@ -107,16 +168,39 @@ textarea {
     font-weight: bold;
 }
 
+textarea, #submit, #dropdown {
+    border-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-image-slice: 1;
+}
+
 #submit:hover {
     background: white;
     color: black;
+}
+
+/* footer ----------*/
+
+.page-footer {
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.page-footer span {
+    font-size: 18px;
+    color: palevioletred;
 }
 
 /* media query------- */
 
 @media screen and (max-width:800px) {
     .container {
-        width: 98vw;
+        width: 95vw;
+    }
+    .heading {
+        width: 96vw;
     }
     form {
         padding: 15px 20px;

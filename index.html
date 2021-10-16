@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher:wght@700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Philosopher:wght@700&family=Playfair+Display&display=swap" rel="stylesheet">
-    
 </head>
 
 <body>
@@ -24,26 +25,38 @@
             </p>
         </header>
         <form action="#" id="survey-form">
-            <label for="name" id="name-label">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required autocomplete="off"/>
-           
+            <!--------- name-------------------------------->
+            <div class="wrapper">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required autocomplete="off" />
+                <div class="underline"></div>
+            </div>
+            <!-- email --------------------------------------->
+            <div class="wrapper">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required autocomplete="off">
+                <div class="underline"></div>
+            </div>
+            <!-- age ------------------------------------------>
+            <div class="wrapper">
+                <label for="number" id="number-label">Age (Optional)</label>
+                <input type="number" id="number" placeholder="Age" min="14" max="100" autocomplete="off">
+                <div class="underline"></div>
+            </div>
 
-            <label for="email" id="email-label">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required autocomplete="off">
-
-            <label for="number" id="number-label">Age (Optional)</label>
-            <input type="number" id="number" placeholder="Age" min="14" max="100" autocomplete="off">
             <!-- dropdown menu ------------------>
-            <label for="dropdown">Which medium do you choose to read from?</label><br>
-            <select name="medium" id="dropdown">
-                <option value="" disabled selected>Choose medium</option>
-                <option value="printbook">Print Books</option>
-                <option value="ebook">E-books</option>
-                <option value="magazines">Magazines</option>
-                <option value="newspaper">Newspapers</option>
-                <option value="smartphone">Smartphone</option>
-                <option value="other">Other</option>
-            </select>
+            <div class="drop">
+                <label for="dropdown">Which medium do you choose to read from?</label><br>
+                <select name="medium" id="dropdown">
+                    <option value="" disabled selected>Choose medium</option>
+                    <option value="printbook">Print Books</option>
+                    <option value="ebook">E-books</option>
+                    <option value="magazines">Magazines</option>
+                    <option value="newspaper">Newspapers</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
             <!-- radio buttons--------------------->
             <p class="radio-label">What do you prefer?</p>
             <input type="radio" id="fiction" name="preference" value="fiction">
@@ -54,6 +67,13 @@
 
             <input type="radio" id="both" name="preference" value="both">
             <label for="both">Both</label><br>
+
+            <!-- range ------------------------>
+            <div class="slider">
+                <label for="slider">On the scale of 1-5 how much do you enjoy reading?</label><br>
+                <input type="range" id="slider" name="slider" min="1" max="5"/>
+            </div>
+
             <!------------ checkbox ---------------------->
             <p class="check-label">Which of the following genres of books do you prefer to read?</p>
             <input type="checkbox" id="mystery" name="genre" value="mystery">
@@ -75,12 +95,19 @@
             <label for="scifi">Sci-fi</label><br>
 
             <!-- textarea ------------------------->
-            <label for="textarea" id="comment">Which is your favorite book and why?</label><br>
-            <textarea name="textarea" id="textarea" placeholder="Write here..."></textarea>
+            <div class="writing-area">
+                <label for="textarea" id="comment">Which is your favorite book and why?</label><br>
+                <textarea name="textarea" id="textarea" required placeholder="Write here..."></textarea>
+            </div>
 
             <!-- submit button -->
             <button id="submit" type="submit">submit</button>
         </form>
+
+        <!-- footer ------------------------------>
+        <footer class="page-footer">
+            <p>Made with <span>&#10084;</span> by Sneha Ratnani</p>
+        </footer>
     </div>
 </body>
 
